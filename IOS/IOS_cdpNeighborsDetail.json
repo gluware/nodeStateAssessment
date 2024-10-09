@@ -1,0 +1,20 @@
+{
+	"cmd": "show cdp neighbors detail",
+	"groupName": "cdpNeighbors",
+	"discover": {
+		"peers": {
+			"expressions": [
+				"Device ID: (?<deviceId>[-.()\\w]+)",
+				"Interface: (?<localPort>[\\/\\w]+),\\s+Port ID \\(outgoing port\\): (?<remotePort>[\\/\\w]+)",
+				"Holdtime : (?<holdTime>\\d+)",
+				"\\), Version (?<version>\\d+\\.\\d+(?:\\([.\\w]+\\))*(?:\\.\\d+)*)\\.?(?<build>\\w+)*,? (?:(?:RELEASE|MAINTENANCE INTERIM) SOFTWARE|CUST-SPECIAL:V\\w+SR(\\w+))*",
+				"VTP Management Domain: '(?<vtpDomain>[-\\w]+)'"
+			],
+			"localKey": "localPort",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": false
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

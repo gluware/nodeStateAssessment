@@ -1,0 +1,22 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"cmd": "show ip protocols",
+	"keyLineRegEx": ".+",
+	"groupName": "neighbors",
+	"discover": {
+		"proto": {
+			"expressions": [
+				"^Routing Protocol is (?<proto>\S+.+$)|(?<data>^.+)"
+			]
+		},
+		"data": {
+			"expressions": [
+				"(?<data>^.+)$"
+			]
+		}
+	},
+	"options": {},
+	"rootEntry": "no"
+}

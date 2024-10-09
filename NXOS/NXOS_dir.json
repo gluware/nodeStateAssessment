@@ -1,0 +1,13 @@
+{
+	"@type": {
+		"ref": "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id": "5371c1b1-c19c-4f27-84df-5e72d239b222",
+	"cmd" : "dir",
+	"rootEntry" : "yes",
+	"groupName" : "DIR",
+	"discover" : {
+	},
+	"options" : {
+	}
+}

@@ -1,0 +1,16 @@
+{
+	"cmd": "show lldp neighbors",
+	"groupName": "lldp",
+	"discover": {
+		"neighbors": {
+			"expressions": [
+				"(?<Port>\\S+)\\s+(?<NeighborDeviceID>[^\\s]+(?:\\.[^\\s]+)+)\\s+(?<NeighborPortID>\\S+)\\s+(?<TTL>\\d+)$"
+			],
+			"localKey": "Port",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

@@ -1,0 +1,13 @@
+{
+	"@type": {
+		"ref": "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id": "b3409d91-02c9-4e6d-9aa2-f9b5f2489697",
+	"cmd" : "show fabricpath isis vlan-range",
+	"rootEntry" : "yes",
+	"groupName" : "ISIS_VLAN",
+	"discover" : {
+	},
+	"options" : {
+	}
+}

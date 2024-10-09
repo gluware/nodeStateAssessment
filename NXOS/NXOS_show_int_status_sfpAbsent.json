@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "ab08ad72-70c1-496a-b1e3-e99f8b740a30",
+	"cmd": "show interface status | inc sfpAbsent",
+	"groupName": "sfpAbsent",
+	"discover": {
+		"interfaces": {
+			"expressions": [
+				"(?<interface>^[\\w\\/]+)\\s+(?<description>.+)\\s+(?<status>sfpAbsent)\\s+(?<vlan>[\\w-]+)\\s+(?<duplex>[\\w-]+)\\s+(?<speed>[\\w-]+)\\s+(?<type>[\\w-]+)"
+			],
+			"localKey": "interface",
+			"preserveLocalKey": true
+		}
+	},
+	"options": {
+		"generateLocalKey": false
+	},
+	"rootEntry": "yes"
+}

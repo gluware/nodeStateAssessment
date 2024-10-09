@@ -1,0 +1,17 @@
+{
+	"cmd": "show ip http server all",
+	"groupName": "httpServer",
+	"discover": {
+		"state": {
+			"expressions": [
+				"HTTP server port: (?<httpPort>\\d+)",
+				"HTTP server status: (?<status>Enabled|Disabled)"
+			],
+			"localKey": "",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": false
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

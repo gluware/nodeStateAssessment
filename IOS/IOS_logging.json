@@ -1,0 +1,19 @@
+{
+	"cmd": "show logging",
+	"keyLineRegEx": "(?<date>[a-zA-Z]+(?:\\s+)?\\d+(?: \\d{4})?) (?<clock>\\d{1,2}\\:\\d{1,2}\\:\\d{1,2}(?:\\.\\d+)?): (?<facility>\\%\\S+): Configured from console by (?<user>\\w+) on (?<console>\\w+) \\((?<srcIp>\\S+)\\)",
+	"groupName": "log",
+	"discover": {
+		"line": {
+			"expressions": [
+				"(?<date>[a-zA-Z]+(?:\\s+)?\\d+(?: \\d{4})?) (?<clock>\\d{1,2}\\:\\d{1,2}\\:\\d{1,2}(?:\\.\\d+)?): (?<facility>\\%\\S+): Configured from console by (?<user>\\w+) on (?<console>\\w+) \\((?<srcIp>\\S+)\\)"
+			]
+		},
+		"interfaceStatus": {
+			"expressions": [
+				"(?<date>[a-zA-Z]+(?:\\s+)?\\d+(?: \\d{4})?) (?<clock>\\d{1,2}\\:\\d{1,2}\\:\\d{1,2}(?:\\.\\d+)?): (?<facility>\\%\\S+): Interface (?<interface>\\S+), changed state to (?<state>up|down)"
+			]
+		}
+	},
+	"options": {},
+	"rootEntry": "no"
+}

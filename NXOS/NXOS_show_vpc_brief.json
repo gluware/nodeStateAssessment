@@ -1,0 +1,13 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "cdd598ad-d5d3-48d2-90b1-fe893469c0e9",
+	"cmd" : "show vpc brief",
+	"rootEntry" : "yes",
+	"groupName" : "vpcBrief",
+	"discover" : {
+	},
+	"options" : {
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"@type": {
+		"ref": "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id": "a79ef68a-f983-4799-8e3c-b5e4f8a8af00",
+	"cmd" : "show fabricpath isis database",
+	"rootEntry" : "yes",
+	"groupName" : "ISIS_DATABASE",
+	"discover" : {
+	},
+	"options" : {
+	}
+}

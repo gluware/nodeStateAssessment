@@ -1,0 +1,13 @@
+{
+	"@type": {
+		"ref": "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id": "9cfce8d0-1b62-4230-85b9-da61b582bf8b",
+	"cmd" : "sh vpc consistency-parameters global",
+	"rootEntry" : "yes",
+	"groupName" : "VPC_CONS",
+	"discover" : {
+	},
+	"options" : {
+	}
+}

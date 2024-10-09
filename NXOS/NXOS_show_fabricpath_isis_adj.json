@@ -1,0 +1,13 @@
+{
+	"@type": {
+		"ref": "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id": "c8d44fa2-7a46-4b9d-9c46-ae8d820d482a",
+	"cmd" : "show fabricpath isis adjacency",
+	"rootEntry" : "yes",
+	"groupName" : "ISIS_ADJ",
+	"discover" : {
+	},
+	"options" : {
+	}
+}

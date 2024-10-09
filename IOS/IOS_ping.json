@@ -1,0 +1,25 @@
+{
+	"cmd": "ping #context.ipAddress",
+	"groupName": "ping",
+	"discover": {
+		"rate": {
+			"expressions": [
+				"Sending \\d+, (?<pcktSize>\\d+)\\-byte ICMP Echos to (?<ipAddress>\\d+.\\d+.\\d+.\\d+), timeout is \\d+ seconds",
+				"Success rate is (?<successRate>\\d+).*"
+			],
+			"localKey": "",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": false
+		}
+	},
+	"options": {
+		"params": [
+			{
+				"name": "ipAddress",
+				"label": "IP Address",
+				"description": "ip of server to ping"
+			}
+		]
+	},
+	"rootEntry": "yes"
+}

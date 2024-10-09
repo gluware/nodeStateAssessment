@@ -1,0 +1,29 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "3728bd5a-f9a1-4e72-98ec-d26b31595c6c",
+	"cmd" : "show memory summary",
+	"rootEntry" : "yes",
+	"groupName" : "memory",
+	"discover" : {
+		"status" : {
+			"expressions" : [
+				"Total System Memory\\.*\\s(?<sysTotal>.+)",
+				"Total System Free Memory\\.*\\s(?<sysFree>.+)",
+				"Total Memory in Buffers\\.*\\s(?<bufferTotal>.+)",
+				"Total Memory in Cache\\.*\\s(?<cacheTotal>.+)",
+				"Total Active Memory\\.*\\s(?<activeTotal>.+)",
+				"Total InActive Memory\\.*\\s(?<inactiveTotal>.+)",
+				"WLC Peak Memory\\.*\\s(?<wlcPeak>.+)",
+				"WLC Virtual Memory Size\\.*\\s(?<wlcVirtual>.+)",
+				"WLC Resident Memory\\.*\\s(?<wlcResident>.+)",
+				"WLC Data Segment Memory\\.*\\s(?<wlcSegment>.+)"
+			],
+			"localKey" : ""
+		}
+	},
+	"options" : {
+		"generateLocalKey" : false
+	}
+}

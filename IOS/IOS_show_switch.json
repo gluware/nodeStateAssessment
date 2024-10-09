@@ -1,0 +1,26 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "a5992114-c1d7-4b6a-9b2a-4432909d3b80",
+	"cmd" : "show switch",
+	"rootEntry" : "yes",
+	"groupName" : "stack",
+	"discover" : {
+		"members" : {
+			"expressions" : [
+				"(?<id>\\d+)\\s+(?<role>Active|Standby)\\s+(?<macAddress>[a-f0-9]{4}\\.[a-f0-9]{4}\\.[a-f0-9]{4})\\s+(?<priority>\\d+)\\s+(?<version>\\w\\d+)\\s+(?<state>\\w+)"
+			],
+			"localKey" : "id"
+		},
+		"local" : {
+			"expressions" : [
+				"Switch\\/Stack Mac Address : (?<macAddress>[a-f0-9]{4}\\.[a-f0-9]{4}\\.[a-f0-9]{4}) - Local Mac Address"
+			],
+			"localKey" : ""
+		}
+	},
+	"options" : {
+		"generateLocalKey" : false
+	}
+}

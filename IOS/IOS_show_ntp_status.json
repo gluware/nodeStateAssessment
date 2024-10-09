@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "d9332a4b-5224-46b2-a035-46ccbe236878",
+	"cmd" : "show ntp status",
+	"rootEntry" : "yes",
+	"groupName" : "ntp",
+	"discover" : {
+		"status" : {
+			"expressions" : [
+				"Clock is synchronized, stratum \\d+, reference is (?<ip>\\S+)"
+			],
+			"localKey" : "ip",
+			"preserveLocalKey" : true
+		}
+	},
+	"options" : {
+	}
+}

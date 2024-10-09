@@ -1,0 +1,16 @@
+{
+	"cmd": "show uptime",
+	"groupName": "uptime",
+	"discover": {
+		"current": {
+			"expressions": [
+				"(?<time>\\d{2}:\\d{2}:\\d{2})\\s+up\\s+(?<uptime>\\d+ days?(?:,\\s+\\d+:\\d{2})?)?,?\\s+(?<users>\\d+) user(?:s)?,?\\s+load\\s+average:\\s+(?<load1>\\d+\\.\\d+),\\s+(?<load2>\\d+\\.\\d+),\\s+(?<load3>\\d+\\.\\d+)"
+			],
+			"localKey": "time",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

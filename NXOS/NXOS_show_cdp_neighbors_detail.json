@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "66d29e5e-cfab-49c3-8ff0-9a2d84e639c2",
+	"cmd" : "show cdp neighbors detail",
+	"rootEntry" : "no",
+	"keyLineRegEx" : "Device ID:(.+)",
+	"groupName" : "cdp",
+	"discover" : {
+		"neighbors" : {
+			"expressions" : [
+				"Device ID:(?<deviceId>.+)",
+				"Interface: (?<localIntf>[\\/\\w]+),\\s+Port ID \\(outgoing port\\): (?<remoteIntf>[\\/\\w\\s]+$)"
+			]
+		}
+	},
+	"options" : {
+	}
+}

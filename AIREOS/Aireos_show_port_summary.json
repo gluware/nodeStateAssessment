@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "15ef007e-0081-462e-8db0-f374d50e653a",
+	"cmd" : "show port summary",
+	"rootEntry" : "yes",
+	"groupName" : "interface",
+	"discover" : {
+		"status" : {
+			"expressions" : [
+				"(?<intId>\\d+)\\s+(?<type>\\S+)\\s+(?<stpStatus>\\S+)\\s+(?<adminMode>\\S+)\\s+(?<physMode>\\S+)\\s+(?<physStatus>[\\w\\s]+\\b)\\s+(?<linkStatus>Up)\\s+(?<linkTrap>\\w+)\\s+(?<poe>\\S+)\\s+(?<sfpType>\\d+[\\w]+)"
+			],
+			"localKey" : "intId"
+		}
+	},
+	"options" : {
+		"generateLocalKey" : false
+	}
+}

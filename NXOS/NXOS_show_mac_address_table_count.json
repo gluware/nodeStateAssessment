@@ -1,0 +1,23 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "39683514-e4b0-4749-a949-327035f532bb",
+	"cmd": "show mac address-table count",
+	"rootEntry" : "yes",
+	"groupName": "MAC",
+	"discover": {
+		"count": {
+			"expressions": [
+				"^Dynamic Address Count:\\s+(?<dynamic>\\d+)",
+				"^Static Address \\(User-defined\\) Count:\\s+(?<static>\\d+)",
+				"^Multicast MAC Address Count:\\s+(?<multicast>\\d+)",
+				"^Total MAC Addresses in Use:\\s+(?<total>\\\\d+)"
+			],
+			"localKey": "",
+			"preserveLocalKey" : false
+		}
+	},
+	"options": {		"generateLocalKey" : true
+}
+}

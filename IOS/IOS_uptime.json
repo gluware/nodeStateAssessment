@@ -1,0 +1,16 @@
+{
+	"cmd": "show version | i uptime",
+	"groupName": "uptime",
+	"discover": {
+		"uptime": {
+			"expressions": [
+				"\\S+ uptime is \\d+ months, \\d+ week(s), \\d+ day(s), \\d+ minute(s)"
+			],
+			"localKey": "uptime",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

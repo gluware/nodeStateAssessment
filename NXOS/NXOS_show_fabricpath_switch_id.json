@@ -1,0 +1,13 @@
+{
+	"@type": {
+		"ref": "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id": "e8bd17c4-5fb8-42d6-ba54-24875a982ad6",
+	"cmd" : "show fabricpath isis switch-id",
+	"rootEntry" : "yes",
+	"groupName" : "ISIS_ID",
+	"discover" : {
+	},
+	"options" : {
+	}
+}

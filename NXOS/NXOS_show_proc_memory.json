@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "4c5b4907-468c-4fd0-89e2-3ea1b3bd1f46",
+	"cmd" : "show processes memory shared",
+	"rootEntry" : "yes",
+	"groupName" : "memory",
+	"discover" : {
+		"status" : {
+			"expressions" : [
+				"Shared memory totals.+Size\\:\\s(?<total>[\\w\\s]+),\\sUsed\\:\\s(?<used>[\\w\\s]+),\\sAvailable\\:\\s(?<free>[\\w\\s]+)"
+			],
+			"localKey" : "",
+			"preserveLocalKey" : true
+		}
+	},
+	"options" : {
+		"generateLocalKey" : false
+	}
+}

@@ -1,0 +1,13 @@
+{
+	"@type": {
+		"ref": "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id": "49d02b3f-42e7-464c-8b23-206c6c50d141",
+	"cmd" : "show fabricpath isis hostname",
+	"rootEntry" : "yes",
+	"groupName" : "ISIS_HOSTNAME",
+	"discover" : {
+	},
+	"options" : {
+	}
+}

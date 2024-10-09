@@ -1,0 +1,31 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "f95a74d7-dd77-48b0-9cb9-d162c627a337",
+	"cmd" : "show interface #context.interfaceName",
+	"rootEntry" : "no",
+	"keyLineRegEx" : "([\\-\\/\\w\\.]+) is (?:administratively )*(?:up|down),",
+	"groupName" : "interface",
+	"discover" : {
+		"status_up" : {
+			"expressions" : [
+				"[\\/\\w]+ is (?:administratively )*(?<state>up),"
+			]
+		},
+		"status_down" : {
+			"expressions" : [
+				"[\\/\\w]+ is (?:administratively )*(?<state>down),"
+			]
+		}
+	},
+	"options" : {
+		"params" : [
+			{
+				"name" : "interfaceName",
+				"label" : "Interface Name",
+				"description" : "Name of the interface"
+			}
+		]
+	}
+}

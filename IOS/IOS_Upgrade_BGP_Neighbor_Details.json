@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "f95a74d7-dd77-48b0-9cb9-d162c627a337",
+	"cmd": "show ip bgp neighbors #context.ipBgpNeighbor",
+	"keyLineRegEx": "BGP neighbor is ([0-9a-f\\.]+)",
+	"groupName": "bgpNeighbors",
+	"discover": {
+		"peers": {
+			"expressions": [
+				"BGP neighbor is (?<ipAddress>[0-9a-f\\.]+),  remote AS (?<remoteAS>\\d+), (?<linkType>internal|external) link",
+				"BGP version 4, remote router ID (?<remoteRouterId>(?:\\d{1,3}\\.){3}\\d{1,3})",
+				"BGP state = (?<bgpState>\\w+), up for (?<upTime>[:0-9]+)",
+				"Prefixes Current:\\s+ (?<bgpSent>\\d+)\\s+(?<bgpRcvd>\\d+)"
+			]
+		}
+	},
+	"options": {},
+	"rootEntry": "no"
+}

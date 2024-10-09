@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "da1142df-cd4b-42b4-a323-0b4b44448670",
+	"cmd" : "sh mac address-table dynamic",
+	"rootEntry" : "yes",
+	"groupName" : "MACDynamic",
+	"discover" : {
+		"table" : {
+			"expressions" : [
+				"(?<entryType>^\\*|^\\+|^G|^R|^O)\\s+(?<vlan>\\d+)\\s+(?<mac>[0-9A-Fa-f]+\\.[0-9A-Fa-f]+\\.[0-9A-Fa-f]+)\\s+dynamic\\s+(?<age>\\d+)\\s+F\\s+F\\s+(?<interface>\\S+)"
+			],
+			"localKey" : "",
+			"preserveLocalKey" : false
+		}
+	},
+	"options" : {
+		"generateLocalKey" : true
+	}
+}

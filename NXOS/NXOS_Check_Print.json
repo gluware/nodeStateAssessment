@@ -1,0 +1,11 @@
+{
+	"@type": {
+		"ref": "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id": "405e41f7-c411-40e0-8ccb-7eceffe8ff41",
+	"cmd": "!!!!!!!!!!!!!!! STATE Assessment !!!!!!!!!!!!!!!",
+	"groupName": "Announce",
+	"discover": {},
+	"options": {},
+	"rootEntry": "yes"
+}

@@ -1,0 +1,16 @@
+{
+	"cmd": "show ip ospf interface brief",
+	"groupName": "ospf",
+	"discover": {
+		"interfaces": {
+			"expressions": [
+				"(?<Interface>\\S+)\\s+(?<Instance>\\d+)\\s+(?<VRF>\\S+)\\s+(?<Area>\\S+)\\s+(?<IPAddress>\\S+)\\s+(?<Cost>\\d+)\\s+(?<State>\\S+)\\s+(?<Nbrs>\\d+)$"
+			],
+			"localKey": "Interface",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

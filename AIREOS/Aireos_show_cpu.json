@@ -1,0 +1,21 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "ec40c7c4-7aca-436f-a154-11a7bdaf47d0",
+	"cmd" : "show cpu",
+	"rootEntry" : "yes",
+	"groupName" : "cpu",
+	"discover" : {
+		"status" : {
+			"expressions" : [
+				"Current CPU\\(s\\) load: (?<cpuLoad>\\d+\\%)",
+				"Individual CPU load: (?<individualCpu>.+)"
+			],
+			"localKey" : ""
+		}
+	},
+	"options" : {
+		"generateLocalKey" : false
+	}
+}

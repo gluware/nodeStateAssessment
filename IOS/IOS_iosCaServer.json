@@ -1,0 +1,25 @@
+{
+	"cmd": "sh crypto pki server",
+	"keyLineRegEx": "Certificate Server (.+):",
+	"groupName": "iosCa",
+	"discover": {
+		"state": {
+			"expressions": [
+				"Status: (?<status>.+)",
+				"State: (?<state>.+)",
+				"Last certificate issued serial number \\(hex\\): (?<lastIssuedSerialNumber>[0-9A-F]+)",
+				"CA certificate expiration timer: (?<caExpirationDate>.+)"
+			]
+		},
+		"config": {
+			"expressions": [
+				"CA cert fingerprint: (?<md5Fingerprint>.+)",
+				"Granting mode is: (?<grantMode>.+)",
+				"Issuer name: (?<issuerName>.+)",
+				"configuration is (?<lock>\\w+)"
+			]
+		}
+	},
+	"options": {},
+	"rootEntry": "no"
+}

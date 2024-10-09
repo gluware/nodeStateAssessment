@@ -1,0 +1,24 @@
+{
+	"cmd": "show ip bgp summary",
+	"groupName": "bgpSummary",
+	"discover": {
+		"peers": {
+			"expressions": [
+				"BGP router identifier (?<bgpRouterId>^\\d\\.\\d\\.\\d\\.\\d), local AS number (?<bgpLocalAs>)",
+				"BGP activity (?<bgpTotalPrefixes>\\d\\/\\d) prefixes,  (?<bgpTotalPaths>\\d\\/\\d) paths, scan interval (?<scanInterval>\\d) secs",
+				"^(?<bgpNeighbor>\\d+\\.\\d+\\.\\d+\\.\\d+)\\s+(?<bgpVersion>\\d+)\\s+(?<remoteAsn>\\d+)\\s+(?<bgpMsgIn>\\d+)\\s+(?<bgpMsgOut>\\d+)\\s+(?<bgpTable>\\d+)\\s+(?<bgpInQ>\\d+)\\s+(?<bgpOutQ>\\d+)\\s+(?<statusTime>\\S+)\\s+(?<pfxCount>.+)$"
+			],
+			"localKey": "bgpNeighbor",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		}
+	},
+	"options": {
+		"filterCLI": {
+			"startLineNumber": 1,
+			"startLineRegex": "^(?<bgpNeighbor>\\d+\\.\\d+\\.\\d+\\.\\d+)\\s+(?<bgpVersion>\\d+)\\s+(?<remoteAsn>\\d+)\\s+(?<bgpMsgIn>\\d+)\\s+(?<bgpMsgOut>\\d+)\\s+(?<bgpTable>\\d+)\\s+(?<bgpInQ>\\d+)\\s+(?<bgpOutQ>\\d+)\\s+(?<statusTime>\\S+)\\s+(?<pfxCount>.+)$",
+			"finishLineRegex": "^\\s*$"
+		}
+	},
+	"rootEntry": "yes"
+}

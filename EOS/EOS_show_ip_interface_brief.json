@@ -1,0 +1,16 @@
+{
+	"cmd": "show ip interface brief",
+	"groupName": "interfaces",
+	"discover": {
+		"interface": {
+			"expressions": [
+				"(?<Interface>\\S+)\\s+(?<IPAddress>\\S+)\\s+(?<Status>\\S+)\\s+(?<Protocol>\\S+)\\s+(?<MTU>\\d+)\\s+(?<Owner>\\S*)$"
+			],
+			"localKey": "Interface",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

@@ -1,0 +1,24 @@
+{
+	"cmd": "show ip route",
+	"groupName": "routes",
+	"discover": {
+		"table": {
+			"expressions": [
+				"(?<type>^[a-z,A-Z]).\\s+(?<destination>\\S+)(\\s\\[(?<ad>\\d*)\\/(?<c>\\d*)] via | is directly connected,\\s)(?<nextHop>\\d+\\.\\d+\\.\\d+\\.\\d+|(?<interfaceName>\\S+))"
+			],
+			"localKey": "destination, source",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		},
+		"summary": {
+			"expressions": [
+				"\\s*(?<subnet>.+)\\sis subnetted,(?<subnetCount>.+)\\ssubnets"
+			],
+			"localKey": "subnet",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

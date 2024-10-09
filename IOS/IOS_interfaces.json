@@ -1,0 +1,41 @@
+{
+	"cmd": "show interface #context.interfaceName",
+	"keyLineRegEx": "([\\.\\/\\w]+) is (?:administratively )*(?:up|down),",
+	"groupName": "interface",
+	"discover": {
+		"status": {
+			"expressions": [
+				"[\\/\\w]+ is (?:administratively )*(?<state>up|down),"
+			]
+		},
+		"address": {
+			"expressions": [
+				"address is (?<macAddress>[a-f0-9]{4}\\.[a-f0-9]{4}\\.[a-f0-9]{4})",
+				"Internet address is (?<ipAddress>\\d+\\.\\d+\\.\\d+\\.\\d+\\/\\d+)"
+			]
+		},
+		"statistics": {
+			"expressions": [
+				"MTU (?<mtu>\\d+) bytes, BW (?<bandwidthKbit>\\d+) Kbit\\/sec, DLY (?<delay>\\d+) usec,",
+				"Input queue: (?<inputQueueSize>\\d+)\\/(?<inputQueueMax>\\d+)\\/(?<inputQueueDrops>\\d+)\\/(?<inQueueFlushes>\\d+) \\(size\\/max\\/drops\\/flushes\\); Total output drops: (?<TotalOutputDrops>\\d+)",
+				"Output queue: (?<outputQueueSize>\\d+)\\/(?<outputQueueMax>\\d+) \\(size\\/max\\)",
+				"(?<inputTimeWindow>\\d+) minute input rate (?<inputRateBps>\\d+) bits\\/sec, (?<inputPacketsPerSec>\\d+) packets\\/sec",
+				"(?<outputTimeWindow>\\d+) minute output rate (?<outputRateBps>\\d+) bits\\/sec, (?<outputPacketsPerSec>\\d+) packets\\/sec",
+				"(?<inputErrors>\\d+) input errors, (?<crc>\\d+) CRC, (?<frame>\\d+) frame, (?<overrun>\\d+) overrun, (?<ignored>\\d+) ignored",
+				"(?<outputErrors>\\d+) output errors, (?<collisions>\\d+) collisions, (?<interfaceResets>\\d+) interface resets",
+				"(?<packetsInput>\\d+) packets input, (?<inputBytes>\\d+) bytes, (?<noBuffer>\\d+) no buffer",
+				"(?<packetsOutput>\\d+) packets output, (?<outputBytes>\\d+) bytes, (?<underruns>\\d+) underruns"
+			]
+		}
+	},
+	"options": {
+		"params": [
+			{
+				"name": "interfaceName",
+				"label": "Interface Name",
+				"description": "Name of the interface"
+			}
+		]
+	},
+	"rootEntry": "no"
+}

@@ -1,0 +1,31 @@
+{
+	"cmd": "show ip bgp summary",
+	"groupName": "bgp",
+	"discover": {
+		"neighbors": {
+			"expressions": [
+				"((?<Neighbor>\\d+\\.\\d+\\.\\d+\\.\\d+)\\s+(?<Version>\\d+)\\s+(?<RemoteAS>\\d+)\\s+(?<MsgIn>\\d+)\\s+(?<MsgOut>\\d+)\\s+(?<InQ>\\d+)\\s+(?<OutQ>\\d+)\\s+(?<StatusTime>\\S+)\\s+(?<State>\\S+))(\\n|\\s+(?<PfxRcv>\\d+)\\s+(?<PfxAcc>\\d+))"
+			],
+			"localKey": "Neighbor",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		},
+		"localAsn": {
+			"expressions": [
+				"BGP summary information for VRF  (?<Vrf>\\S+)$",
+				"Router identifier (?<RouterId>\\S+), local AS number (?<LocalAs>\\d+)$"
+			],
+			"localKey": "RouterId",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		}
+	},
+	"options": {
+		"filterCLI": {
+			"startLineNumber": 1,
+			"startLineRegex": "^\\d+.+",
+			"finishLineRegex": "^\\s*$"
+		}
+	},
+	"rootEntry": "yes"
+}

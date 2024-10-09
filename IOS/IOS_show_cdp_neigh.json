@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "f3488801-6f6f-4140-9f80-abd6d2a0ba48",
+	"cmd" : "show cdp neighbors",
+	"rootEntry" : "no",
+	"keyLineRegEx" : "^([-\\.a-zA-Z0-9]+)$",
+	"groupName" : "cdp",
+	"discover" : {
+		"neighbors" : {
+			"expressions" : [
+				"(?<deviceId>^[\\w\\d\\-\\.()]+)\\s+(?<localPort>(?:[\\w]+\\s?[\\d\\/\\-\\.]+))\\s+(?<holdtime>\\d+)\\s+(?<capability>[RSDTHCBIMPr\\s]+\\b)\\s+(?<platform>(?:\\b[\\S+]+))\\s+(?<remotePort>(?:[\\w]+\\s?[\\d\\/\\-\\.]+)$)"
+			]
+		}
+	},
+	"options" : {
+	}
+}

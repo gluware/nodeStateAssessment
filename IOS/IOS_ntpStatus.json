@@ -1,0 +1,16 @@
+{
+	"cmd": "show ntp status",
+	"groupName": "ntpData",
+	"discover": {
+		"status": {
+			"expressions": [
+				"Clock is (?<status>^(unsynchronized|synchronized)), stratum (?<stratum>\\d+), (reference is (?<ip>.+$)|no reference clock$)"
+			],
+			"localKey": "status",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

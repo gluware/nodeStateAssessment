@@ -1,0 +1,22 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "f95a74d7-dd77-48b0-9cb9-d162c627a337",
+	"cmd": "sh ip route 0.0.0.0 0.0.0.0",
+	"groupName": "default_route",
+	"discover": {
+		"route": {
+			"expressions": [
+				"\\*\\s+(?<nexthop>.+)"
+			],
+			"localKey": "",
+			"preserveLocalKey": false,
+			"preserveMultipleValues": false
+		}
+	},
+	"options": {
+		"generateLocalKey": true
+	},
+	"rootEntry": "yes"
+}

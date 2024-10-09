@@ -1,0 +1,13 @@
+{
+	"@type": {
+		"ref": "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id": "d5e25936-1db9-4bf0-8f24-99cd0a1e20c4",
+	"cmd" : "show fabricpath isis tree",
+	"rootEntry" : "yes",
+	"groupName" : "ISIS_TREE",
+	"discover" : {
+	},
+	"options" : {
+	}
+}

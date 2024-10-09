@@ -1,0 +1,28 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "76eeeb10-4155-48db-ac62-eb0dbae291c2",
+	"cmd" : "show interface",
+	"rootEntry" : "no",
+	"keyLineRegEx" : "([\\-\\/\\w\\.]+) is (?:administratively )*(?:up|down),",
+	"groupName" : "interface",
+	"discover" : {
+		"status" : {
+			"expressions" : [
+				"(?<name>[\\-\\/\\w\\.]+) is (?:administratively )*(?<adminState>up|down), line protocol is (?<line>up(?: \\(connected\\))?|down(?: \\(notconnect\\))?)",
+				"(?:(?<duplex>\\b.*duplex|\\b.*Duplex)\\b), (?<speed>\\S+)(?:, link type is auto)?, media type is (?<type>\\S.+)?",
+				"Description: (?<description>.+)",
+				"address is (?<macAddress>[a-f0-9]{4}\\.[a-f0-9]{4}\\.[a-f0-9]{4})",
+				"Internet address is (?<ipAddress>\\d+\\.\\d+\\.\\d+\\.\\d+\\/\\d+)",
+				"MTU (?<mtu>\\d+) bytes, BW (?<bandwidth>[\\w\\s\\/]+), DLY (?<delay>\\d+) usec,",
+				"Input queue: \\d+\\/\\d+\\/\\d+\\/\\d+ \\(size\\/max\\/drops\\/flushes\\); Total output drops: (?<totalOutputDrops>\\d+)",
+				"(?<inputErrors>\\d+) input errors, (?<crc>\\d+) CRC, \\d+ frame, \\d+ overrun, \\d+ ignored",
+				"(?<outputErrors>\\d+) output errors, (?<collisions>\\d+) collisions, (?<interfaceResets>\\d+) interface resets",
+				"Members in this channel:\\s(?<poMembers>.+)\\b"
+			]
+		}
+	},
+	"options" : {
+	}
+}

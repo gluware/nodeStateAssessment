@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "58139e40-5782-48ad-8fc1-4d13ecd9d510",
+	"cmd" : "show interface status",
+	"rootEntry" : "yes",
+	"groupName" : "interface",
+	"discover" : {
+		"status" : {
+			"expressions" : [
+				"(?<id>(?:^Gi|^Fa|^Po)[0-9\\/]+)\\s+(?<desc>.+\\b)?\\s+(?<status>\\bdisabled|\\benabled|\\bnotconnect|\\bconnected)\\s+(?<vlan>\\d+|routed|trunk|unassigned)\\s+(?<duplex>auto|(?:a-)?full)\\s+(?<speed>auto|(?:a-)?10+)\\s+(?<type>[\\w\\/]+)"
+			],
+			"localKey" : "id",
+			"preserveLocalKey" : true
+		}
+	},
+	"options" : {
+	}
+}

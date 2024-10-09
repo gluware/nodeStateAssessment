@@ -1,0 +1,24 @@
+{
+	"cmd": "sh crypto pki server $context.processName requests",
+	"groupName": "iosCaRequestQueue",
+	"discover": {
+		"state": {
+			"expressions": [
+				"(?<requestId>\\d+)\\s+(?<state>\\w+)\\s+(?<md5Fingerprint>[0-9A-F]{32})\\s+serialNumber=(?<serialNumber>[0-9A-Z]+)\\+(?<subjectName>.+)"
+			],
+			"localKey": "",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": false
+		}
+	},
+	"options": {
+		"params": [
+			{
+				"name": "processName",
+				"label": "IOS CA PKI Processs Name",
+				"description": "The name of the IOS CA process name"
+			}
+		]
+	},
+	"rootEntry": "yes"
+}

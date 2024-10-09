@@ -1,0 +1,16 @@
+{
+	"cmd": "show ip ospf neighbor",
+	"groupName": "ospf",
+	"discover": {
+		"neighbors": {
+			"expressions": [
+				"(?<NeighborID>\\S+)\\s+(?<Instance>\\d+)\\s+(?<VRF>\\S+)\\s+(?<Pri>\\d+)\\s+(?<State>\\S+)\\s+(?<DeadTime>\\d{2}:\\d{2}:\\d{2})\\s+(?<Address>\\S+)\\s+(?<Interface>\\S+)$"
+			],
+			"localKey": "NeighborID",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

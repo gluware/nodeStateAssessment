@@ -1,0 +1,22 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"cmd": "show standby neighbors",
+	"keyLineRegEx": "^[A-Z]+\\s.+$",
+	"groupName": "neighbors",
+	"discover": {
+		"proto": {
+			"expressions": [
+				"^(?<proto>[0-9]+)\\sneighbors\\son\\s(?<ifaceName>[A-Z].+$)"
+			]
+		},
+		"peers": {
+			"expressions": [
+				"^\\s+(?<peerIp>[0-9]+\\.[0-9]+\\.[0-9]+\\.[0-9]+)\\s.+$"
+			]
+		}
+	},
+	"options": {},
+	"rootEntry": "no"
+}

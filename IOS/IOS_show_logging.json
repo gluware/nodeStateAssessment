@@ -1,0 +1,35 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "4504e163-7382-4b34-89c5-085cd4d05728",
+	"cmd" : "show logging",
+	"rootEntry" : "yes",
+	"groupName" : "syslog",
+	"discover" : {
+		"line" : {
+			"expressions" : [
+				"(?<date>[a-zA-Z]+(?:\\s+)?\\d+(?: \\d{4})?) (?<clock>\\d{1,2}\\:\\d{1,2}\\:\\d{1,2}(?:\\.\\d+)?)(?:\\s\\w+)?: (?<facility>\\%\\S+): Configured from console by (?<user>\\w+) on (?<console>\\w+) \\((?<srcIp>\\S+)\\)"
+			],
+			"localKey" : "",
+			"preserveLocalKey" : true
+		},
+		"interfaceStatus" : {
+			"expressions" : [
+				"(?<date>[a-zA-Z]+(?:\\s+)?\\d+(?: \\d{4})?) (?<clock>\\d{1,2}\\:\\d{1,2}\\:\\d{1,2}(?:\\.\\d+)?)(?:\\s\\w+)?: (?<facility>\\%\\S+): Interface (?<interface>\\S+), changed state to (?<state>up|down)"
+			],
+			"localKey" : "",
+			"preserveLocalKey" : true
+		},
+		"messages" : {
+			"expressions" : [
+				"(?<date>[a-zA-Z]+(?:\\s+)?\\d+(?: \\d{4})?) (?<clock>\\d{1,2}\\:\\d{1,2}\\:\\d{1,2}(?:\\.\\d+)?)(?:\\s\\w+)?: (?<facility>\\%\\S+): (?<message>.+)"
+			],
+			"localKey" : "",
+			"preserveLocalKey" : true
+		}
+	},
+	"options" : {
+		"generateLocalKey" : true
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"@type": {
+		"ref": "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id": "3e4c0840-e90b-4a64-bd5b-d25d7b672094",
+	"cmd": "show version",
+	"groupName": "NXOS",
+	"discover": {
+		"boot": {
+			"expressions": [
+				"System version: (?<system>\\S+)",
+				"NXOS image file is: (?<bootimage>\\S+)",
+				"Device name: (?<devicename>\\S+)"
+			],
+			"localKey": "",
+			"preserveLocalKey": false
+		}
+	},
+	"options": {
+		"generateLocalKey": true
+	},
+	"rootEntry": "yes"
+}

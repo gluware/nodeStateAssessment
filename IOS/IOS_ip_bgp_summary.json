@@ -1,0 +1,16 @@
+{
+	"cmd": "show ip bgp summary",
+	"groupName": "peers",
+	"discover": {
+		"bgpNeighbors": {
+			"expressions": [
+				"BGP router identifier (?<bgpRouterId>^\\d\\.\\d\\.\\d\\.\\d), local AS number (?<bgpLocalAs>)",
+				"BGP activity (?<bgpTotalPrefixes>\\d\\/\\d) prefixes,  (?<bgpTotalPaths>\\d\\/\\d) paths, scan interval (?<scanInterval>\\d) secs",
+				"^(?<bgpNeighbor>\\d\\.\\d\\.\\d\\.\\d)(.+)"
+			],
+			"localKey": ""
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

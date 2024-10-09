@@ -1,0 +1,16 @@
+{
+	"cmd": "show lldp neighbors",
+	"groupName": "lldp",
+	"discover": {
+		"neighbors": {
+			"expressions": [
+				"(?<deviceId>[-\\s\\w]{20})(?<localPort>[/\\w]+)\\s+(?<holdTime>\\d+)\\s+(?<capability>[RBTCWPSO,]+)\\s+(?<remotePortId>[./A-Za-z0-9]+)"
+			],
+			"localKey": "deviceId+localPort",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": false
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}

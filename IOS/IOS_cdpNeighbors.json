@@ -1,0 +1,14 @@
+{
+	"cmd": "show cdp neighbors",
+	"keyLineRegEx": "^([-\\.a-zA-Z0-9]+)$",
+	"groupName": "cdp",
+	"discover": {
+		"neighbors": {
+			"expressions": [
+				"(?<deviceId>^[\\w\\d\\-\\.()]+)\\s+(?<localPort>(?:[\\w]+\\s?[\\d\\/\\-\\.]+))\\s+(?<holdtime>\\d+)\\s+(?<capability>[RSDTHCBIMPr\\s]+\\b)\\s+(?<platform>(?:\\b[\\S+]+))\\s+(?<remotePort>(?:[\\w]+\\s?[\\d\\/\\-\\.]+)$)"
+			]
+		}
+	},
+	"options": {},
+	"rootEntry": "no"
+}

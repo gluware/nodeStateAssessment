@@ -1,0 +1,19 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "bcf6005a-6ced-4750-aa3f-c17dc6ee0137",
+	"cmd" : "show ip interface brief",
+	"rootEntry" : "yes",
+	"groupName" : "interfaces",
+	"discover" : {
+		"status" : {
+			"expressions" : [
+				"(?<name>[\\.\\/\\w]+)\\s+(?<ipAddress>\\d+\\.\\d+\\.\\d+\\.\\d+|unassigned)\\s+(YES|NO)\\s+(?:NVRAM|manual)\\s+(?<status>up|down|administratively down)\\s+(?<protocolStatus>up|down)"
+			],
+			"localKey" : "name"
+		}
+	},
+	"options" : {
+	}
+}

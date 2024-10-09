@@ -1,0 +1,22 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "840e9514-11e0-434c-9004-09489acb2502",
+	"cmd" : "show proc memory",
+	"rootEntry" : "yes",
+	"groupName" : "memory",
+	"discover" : {
+		"status" : {
+			"expressions" : [
+				"System memory\\s+:\\s(?<total>\\d+\\w+)\\stotal,\\s(?<used>\\d+\\w+)\\sused,\\s(?<free>\\d+\\w+)\\sfree",
+				"Individual CPU load: (?<indiv>.+)",
+				"Processor Pool Total:\\s+(?<total>\\d+)\\sUsed:\\s+(?<used>\\d+)\\s+Free:\\s+(?<free>\\d+)"
+			],
+			"localKey" : ""
+		}
+	},
+	"options" : {
+		"generateLocalKey" : false
+	}
+}

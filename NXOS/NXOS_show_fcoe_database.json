@@ -1,0 +1,27 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "951b56d1-350e-41fb-8961-e52477cc5fd0",
+	"cmd": "show fcoe database",
+	"rootEntry" : "yes",
+	"groupName": "fcoe",
+	"discover": {
+		"database": {
+			"expressions": [
+				"^vfc\\d+\\s+(?<fcid>.+)"
+			],
+			"localKey": "vfc",
+			"preserveLocalKey": true
+		},
+		"flogi": {
+			"expressions": [
+				"^Total number of flogi count from FCoE devices = (?<count>\\d+)"
+			],
+			"localKey": "",
+			"preserveLocalKey" : false
+		}
+	},
+	"options": {		"generateLocalKey" : true
+}
+}

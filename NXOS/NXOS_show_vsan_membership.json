@@ -1,0 +1,13 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "5e30320e-283c-4344-8611-b0afd72ee72b",
+	"cmd" : "sh vsan membership",
+	"rootEntry" : "yes",
+	"groupName" : "vsan",
+	"discover" : {
+	},
+	"options" : {
+	}
+}

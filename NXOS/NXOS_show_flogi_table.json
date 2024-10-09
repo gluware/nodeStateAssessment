@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "27633285-12e5-4a43-a3ac-80b3961f90da",
+	"cmd": "show npv flogi-table",
+	"rootEntry" : "yes",
+	"groupName": "flogi",
+	"discover": {
+		"table": {
+			"expressions": [
+				"^Total number of flogi = (?<count>\\d+)"
+			],
+			"localKey": "",
+			"preserveLocalKey" : false
+		}
+	},
+	"options": {		"generateLocalKey" : true
+}
+}

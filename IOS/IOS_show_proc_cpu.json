@@ -1,0 +1,20 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateItem.jtype"
+	},
+	"@id" : "6d91aac5-2181-4851-b105-d5c791997684",
+	"cmd" : "sh processes cpu",
+	"rootEntry" : "yes",
+	"groupName" : "cpu",
+	"discover" : {
+		"status" : {
+			"expressions" : [
+				"(?<cpuId>Core\\s\\d+)?(?:\\:\\s)?CPU utilization for five seconds\\:\\s(?<cpu5sec>[\\d\\/\\%]+)\\;\\sone minute\\:\\s(?<cpu1min>\\d+\\%)\\;\\sfive minutes\\:\\s(?<cpu5min>\\d+\\%)"
+			],
+			"localKey" : ""
+		}
+	},
+	"options" : {
+		"generateLocalKey" : false
+	}
+}
