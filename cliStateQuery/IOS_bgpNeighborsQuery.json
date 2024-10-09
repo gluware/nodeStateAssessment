@@ -1,0 +1,12 @@
+{
+	"table": [
+		{
+			"category": "neighbors",
+			"operator": "gt",
+			"varType": "number",
+			"value": "3",
+			"type": "count"
+		}
+	],
+	"mode": "advanced"
+}

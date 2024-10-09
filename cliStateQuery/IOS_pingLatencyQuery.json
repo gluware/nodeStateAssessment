@@ -1,0 +1,17 @@
+{
+	"table": [
+		{
+			"fields": [
+				{
+					"keyType": "regex",
+					"key": ".+",
+					"category": "rate",
+					"field": "successRate",
+					"value": "^(?:[8-9]\\d|\\d{3,})$"
+				}
+			],
+			"type": "lookup"
+		}
+	],
+	"mode": "advanced"
+}

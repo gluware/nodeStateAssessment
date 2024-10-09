@@ -1,0 +1,112 @@
+{
+	"list": [
+		{
+			"item": {
+				"@ref": {
+					"instance": {
+						"construct": "global",
+						"instanceId": "3f96a818-3e8a-4fa8-94f7-7797719f1d77",
+						"instanceName": "EOS_ipBgpSum",
+						"organizationId": "9baf184a-06e4-4e72-9922-4948e07b34de",
+						"subref": "*",
+						"type": "cliStateItem"
+					},
+					"subref": "*"
+				}
+			},
+			"params": "",
+			"includePattern": ".+",
+			"excludePattern": ""
+		},
+		{
+			"item": {
+				"@ref": {
+					"instance": {
+						"construct": "global",
+						"instanceId": "94405e07-575b-4c15-9dce-9af44669f9e1",
+						"instanceName": "EOS_ipOspfInterfaceBrief",
+						"organizationId": "9baf184a-06e4-4e72-9922-4948e07b34de",
+						"subref": "*",
+						"type": "cliStateItem"
+					},
+					"subref": "*"
+				}
+			},
+			"params": "",
+			"includePattern": ".+",
+			"excludePattern": ""
+		},
+		{
+			"item": {
+				"@ref": {
+					"instance": {
+						"construct": "global",
+						"instanceId": "53886a24-fa8d-4fbe-a1d7-390c17d9767f",
+						"instanceName": "EOS_ipOspfNeighbors",
+						"organizationId": "9baf184a-06e4-4e72-9922-4948e07b34de",
+						"subref": "*",
+						"type": "cliStateItem"
+					},
+					"subref": "*"
+				}
+			},
+			"params": "",
+			"includePattern": ".+",
+			"excludePattern": ""
+		},
+		{
+			"item": {
+				"@ref": {
+					"instance": {
+						"construct": "global",
+						"instanceId": "bbe191ea-0765-4ff7-91be-e5344b4b129c",
+						"instanceName": "EOS_lldpNeighbors",
+						"organizationId": "9baf184a-06e4-4e72-9922-4948e07b34de",
+						"subref": "*",
+						"type": "cliStateItem"
+					},
+					"subref": "*"
+				}
+			},
+			"params": "",
+			"includePattern": ".+",
+			"excludePattern": ""
+		},
+		{
+			"item": {
+				"@ref": {
+					"instance": {
+						"construct": "global",
+						"instanceId": "6d4dca1b-4eb7-4277-9402-2102892c36d0",
+						"instanceName": "EOS_uptime",
+						"organizationId": "9baf184a-06e4-4e72-9922-4948e07b34de",
+						"subref": "*",
+						"type": "cliStateItem"
+					},
+					"subref": "*"
+				}
+			},
+			"params": "",
+			"includePattern": ".+",
+			"excludePattern": ""
+		},
+		{
+			"item": {
+				"@ref": {
+					"instance": {
+						"construct": "global",
+						"instanceId": "cf3b8fff-4dde-4a6e-88ea-383a9eef1ef0",
+						"instanceName": "EOS_show_ip_int_brief",
+						"organizationId": "9baf184a-06e4-4e72-9922-4948e07b34de",
+						"subref": "*",
+						"type": "cliStateItem"
+					},
+					"subref": "*"
+				}
+			},
+			"params": "",
+			"includePattern": ".+",
+			"excludePattern": ""
+		}
+	]
+}

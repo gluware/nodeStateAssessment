@@ -1,0 +1,17 @@
+{
+	"@type" : {
+		"ref" : "/sys/type/construct/global/cliStateQuery.jtype"
+	},
+	"@id" : "8e3bb0c2-40eb-4fbf-9f35-0bafeaf78737",
+	"fields": [
+		{
+			"keyType": "regex",
+			"key": ".+",
+			"category": "vPC",
+			"field": "role",
+			"value": "primary"
+		}
+	],
+	"type": "lookup",
+	"mode": "simple"
+}

@@ -1,0 +1,94 @@
+{
+	"list": [
+		{
+			"item": {
+				"@ref": {
+					"instance": {
+						"construct": "global",
+						"instanceId": "c4f9a3a7-c7ea-4d97-b75f-f9f6e7fba815",
+						"instanceName": "IOS_ipBgpSum",
+						"organizationId": "9baf184a-06e4-4e72-9922-4948e07b34de",
+						"subref": "*",
+						"type": "cliStateItem"
+					},
+					"subref": "*"
+				}
+			},
+			"params": "",
+			"includePattern": ".+",
+			"excludePattern": ""
+		},
+		{
+			"item": {
+				"@ref": {
+					"instance": {
+						"construct": "global",
+						"instanceId": "87aebabd-f83e-40cb-b69f-e60faac1e2f6",
+						"instanceName": "IOS_ipBgpNeighbors",
+						"organizationId": "9baf184a-06e4-4e72-9922-4948e07b34de",
+						"subref": "*",
+						"type": "cliStateItem"
+					},
+					"subref": "*"
+				}
+			},
+			"params": "",
+			"includePattern": ".+",
+			"excludePattern": ""
+		},
+		{
+			"item": {
+				"@ref": {
+					"instance": {
+						"construct": "global",
+						"instanceId": "8dcbe0ae-25be-4f89-b111-9a633f59e63a",
+						"instanceName": "IOS_ip_ospf_neighbor",
+						"organizationId": "9baf184a-06e4-4e72-9922-4948e07b34de",
+						"subref": "*",
+						"type": "cliStateItem"
+					},
+					"subref": "*"
+				}
+			},
+			"params": "",
+			"includePattern": ".+",
+			"excludePattern": ""
+		},
+		{
+			"item": {
+				"@ref": {
+					"instance": {
+						"construct": "global",
+						"instanceId": "d715b119-3062-44a2-838e-1ad37cb79f04",
+						"instanceName": "IOS_ip_ospf_intBrief",
+						"organizationId": "9baf184a-06e4-4e72-9922-4948e07b34de",
+						"subref": "*",
+						"type": "cliStateItem"
+					},
+					"subref": "*"
+				}
+			},
+			"params": "",
+			"includePattern": ".+",
+			"excludePattern": ""
+		},
+		{
+			"item": {
+				"@ref": {
+					"instance": {
+						"construct": "global",
+						"instanceId": "5fd0bd4c-8d33-4266-be40-bb7b21e1b5c4",
+						"instanceName": "IOS_ipRoute",
+						"organizationId": "9baf184a-06e4-4e72-9922-4948e07b34de",
+						"subref": "*",
+						"type": "cliStateItem"
+					},
+					"subref": "*"
+				}
+			},
+			"params": "",
+			"includePattern": ".+",
+			"excludePattern": ""
+		}
+	]
+}
