@@ -1,0 +1,17 @@
+{
+	"cmd": "show ip bgp #context.prefix",
+	"groupName": "bgp",
+	"discover": {
+		"prefixes": {
+			"expressions": [
+				"^(?<attributes>\\D\\D\\D\\D\\D)\\s+(?<prefix>\\d+\\.\\d+\\.\\d+\\.\\d+\\/?(?<cidr>\\d+)?)\\s+(?<nexthop>\\d+\\.\\d+\\.\\d+\\.\\d+)\\s+(?<metric>\\d+)\\s+(?<lpref>\\d+)\\s+(?<weight>\\d+)\\s+(?<path>.+)$",
+				"^(?<attributes>r\\D\\D\\D)\\s+(?<prefix>\\d+\\.\\d+\\.\\d+\\.\\d+.+)\\s+(?<nexthop>\\d+\\.\\d+\\.\\d+\\.\\d+)\\s+(?<metric>\\d+)\\s+(?<localPref>\\d+)\\s+(?<weight>\\d+)\\s+(?<path>\\d+.+)"
+			],
+			"localKey": "prefix",
+			"preserveLocalKey": true,
+			"preserveMultipleValues": true
+		}
+	},
+	"options": {},
+	"rootEntry": "yes"
+}
